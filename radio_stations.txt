@@ -1,0 +1,174 @@
+
+
+These websites are BASED
+https://en.everybodywiki.com/List_of_BBC_radio_stream_URLs#Digital-only_stations
+https://gist.github.com/bpsib/67089b959e4fa898af69fea59ad74bc3
+
+https://github.com/mikepierce/internet-radio-streams/blob/main/README.md
+
+DO NOT
+USE
+.mpd
+URLS
+
+THEY FUCK MOODE UP OK DON'T DO IT
+
+
+BBC Radio 1 Dance
+http://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/ak/bbc_radio_one_dance.m3u8
+EDM
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_radio_one_dance
+English
+UK
+Europe
+96 kbps
+AAC+
+
+
+BBC Radio 1 Relax (ENDED)
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_one_relax/bbc_radio_one_relax.isml/bbc_radio_one_relax-audio%3d96000.norewind.m3u8
+Chill-out, well-being, relaxation, meditation
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_radio_one_relax
+English
+UK
+Europe
+96 kbps
+AAC+
+
+
+BBC Radio 1Xtra
+http://as-hls-ww-live.akamaized.net/pool_92079267/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d96000.norewind.m3u8
+Urban contemporary, electronica, hip hop, R&B, soul
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_1xtra
+English
+UK
+Europe
+96 kbps
+AAC+
+
+
+BBC Radio 4 FM Extra
+http://as-hls-ww-live.akamaized.net/pool_26173715/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio%3d96000.norewind.m3u8
+Comedy, drama, entertainment
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_radio_four_extra
+English
+UK
+Europe
+96
+AAC+
+
+
+BBC Radio Cymru
+http://as-hls-ww-live.akamaized.net/pool_24792333/live/ww/bbc_radio_cymru/bbc_radio_cymru.isml/bbc_radio_cymru-audio%3d96000.norewind.m3u8
+News
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_radio_cymru
+English
+UK
+Europe
+96
+AAC+
+
+
+BBC Radio Scotland
+http://as-hls-ww-live.akamaized.net/pool_43322914/live/ww/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d96000.norewind.m3u8
+News
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_radio_scotland_fm
+English
+UK
+Europe
+96
+AAC+
+
+
+BBC World Service
+http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_world_service/bbc_world_service.isml/bbc_world_service-audio%3d96000.norewind.m3u8
+News, speech, discussions
+BBC
+https://www.bbc.co.uk/sounds/play/live:bbc_world_service
+English
+UK
+World
+96kbps
+AAC+ format
+
+
+KCJV 97.9 FM San Antonio - No Hit Radio
+https://onlineradiobox.com/json/us/kcjvlp/play
+Oldies
+No Hit Network
+http://nohitnetwork.com/
+English
+USA
+North America
+? kbps
+? format
+
+
+		KCMP 89.3 FM - The Current
+		http://current.stream.publicradio.org/kcmp.mp3
+		Alternative
+		PBS
+		?
+		English
+		United States
+		North America
+		128 kbps
+		MP3 format
+
+
+KTRU 96.1 FM Houston - Rice University
+https://stream.rcs.revma.com/uevdenv2ss8uv
+Everything
+Rice University
+https://ktru.org/
+English
+USA
+North America
+128 kbps
+AAC+ format
+
+
+KUTX 98.9 Austin - University of Austin
+https://streams.kut.org/4428_56?aw_0_1st.playerid=kutx-free
+Mixed
+University of Austin
+https://kutx.org/
+English
+USA
+North America
+192 kbps
+AAC
+
+GO HERE FOR KUTX STREAM URLs
+https://kutx.org/streams/#stream-urls
+
+
+NASA Third Rock Radio
+http://rfcm.streamguys1.com/thirdrock-icy
+Rock
+NASA
+https://thirdrockradio.net/
+English
+USA
+North America
+? kbps
+? format
+
+
+Observador
+https://playerservices.streamtheworld.com/api/livestream-redirect/OBSERVADOR.mp3
+News
+Observador
+https://observador.pt/radio/
+Portuguese
+Portugal
+Europe
+? kbps
+MP3 format
+

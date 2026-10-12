@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# script to sync music library from WINTERMUTE on every boot up
+
+# rsync arguments
+#	-a syncs recursively & preserves symbolic links, modification times, permissions, etc
+#	-z --compress compress file data during the transfer
+#	--rsync-path specify where the rsync command is located (sometimes necessary)
+#	--partial allows you to resume interrupted transfers
+#	--delete allows file deletion during sync
+#	--exclude={pattern,other_patern} excludes files matching pattern from sync
+
+
+#	for testing:
+#	-v --verbose shows lots of data
+#	-h --human-readable makes numbers legible
+#	-n --dry-run shows what will get copied over without copying
+#	--progress --info=progress provides a progress bar for current transfer
+#	--info=progress2 provides progress bar for all transfers
+#	-P combination of --progress and --partial
+
+
+sudo rsync -az --rsync-path=/usr/bin/rsync --partial --delete --delete-excluded --exclude={*.jpg,*.jpeg,*.png,*.pdf,*.aif,*.aiff,*.aifc,*.wav,*.cue,*.m3u8,*.zip,.*} /mnt/wintermute_music/ /mnt/OSDISK

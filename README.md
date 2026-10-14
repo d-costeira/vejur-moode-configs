@@ -97,7 +97,11 @@ chmod +x nanosound_moode/nanodac_lirc.py
 ```
 sudo sed -i -e 's/^After=mpd$/After=mpd.service/' -e 's/^StandardOutput=null$/Restart=on-failure\nRestartSec=10/' nanosound_lirc.service
 ```
-* Run the following commands install and start the IR Remote Service:
+* !! DO NOT RUN THE `install.sh` SCRIPT !! The installation will be fucked.  Matter of fact:
+```
+rm install.sh
+```
+* Run the following commands to install and start the IR Remote Service:
 ```
 sudo cp nanosound_lirc.service /lib/systemd/system/
 sudo systemctl daemon-reload && sudo systemctl enable --now nanosound_lirc

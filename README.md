@@ -26,16 +26,25 @@ NOTE - Not necessary if you used the Raspberry Pi Imager and configured Wifi at 
 * SAVE
 
 
-## INSTALL AND CONFIGURE ARGON ONE SCRIPT
+## VERIFY SSH ACCESS
+If you did not enable SSH when flashing Moode with the Raspberry Pi Imager, then enable it with these commands:
 > m > Configure > System > Local Services
 * Turn SSH term server ON
-* ssh into the device using
+* SSH into the device using
 ```
-ssh pi@vejur.local   or
-ssh pi@moode.local
+ssh [user]@vejur.local   or
+ssh [user]@moode.local
 ```
+* replace `[user]` with the username you configured in Raspberry Pi Imager, default is `pi`
 * password is `moodeaudio` (or whatever you set it to in Raspberry Pi imager)
-* run the following command:
+* run the following commands to update the device software:
+```
+sudo apt update && sudo apt full-upgrade -y
+```
+
+
+## INSTALL AND CONFIGURE ARGON ONE SCRIPT
+SSH into the device and run the following command:
 ```
 curl https://download.argon40.com/argon1.sh | bash
 (note: the | symbol is ALT+124)
@@ -56,6 +65,49 @@ sudo nano /etc/argon/argonpowerbutton.py
 ```
   (you may have to change the following lines too if there are more conditional statements)
 * CTRL-X then Y then ENTER to save changes
+
+
+## INSTALL IR REMOTE SCRIPT FOR NANOSOUND ONE CASE
+Okay look this script is an outdated mess so we'll have to make significant adjustments
+* Check that you have the correct dependencies installed
+```
+python3 -c "import RPi.GPIO, mpd; print('ok')"
+```
+* If it returns "ok", you're ok - if it doesn't run this command: `sudo apt install -y python3-mpd python3-rpi.gpio`
+* Run the following commands:
+```
+git clone https://github.com/nanomesher/Nanomesher_NanoSound_moode.git
+cd Nanomesher_NanoSound_moode
+```
+* Run the following commands to make necessary changes to the IR Remote script:
+```
+	# change script to run on python 3 instead of python 2
+sed -i -e 's|^#! */usr/bin/python$|#!/usr/bin/python3|' -e 's/^import ConfigParser$/import configparser as ConfigParser/' nanosound_moode/nanodac_lirc.py
+
+	# change script to use the correct HOME directory instead of the default /home/pi
+sed -i "s|/home/pi|$HOME|g" nanosound_lirc.service nanosound_moode/nanodac_lirc.py
+
+	# change script to use the correct audio volume control script location - /var/www/vol.sh is outdated
+sed -i 's|/var/www/vol.sh|/var/www/util/vol.sh|g' nanosound_moode/nanodac_lirc.py
+
+	# make the IR Remote script actually executable
+chmod +x nanosound_moode/nanodac_lirc.py
+```
+* Run the following command to make the service script start after `mpd.service` and restart after 10 seconds if it fails:
+```
+sudo sed -i -e 's/^After=mpd$/After=mpd.service/' -e 's/^StandardOutput=null$/Restart=on-failure\nRestartSec=10/' nanosound_lirc.service
+```
+* Run the following commands install and start the IR Remote Service:
+```
+sudo cp nanosound_lirc.service /lib/systemd/system/
+sudo systemctl daemon-reload && sudo systemctl enable --now nanosound_lirc
+```
+* Test that the service is running:
+```
+systemctl status nanosound_lirc
+```
+After you configure Moode and are able to play music, test the IR Remote included with the NanoSound ONE case, reboot the device, and verify the service still works after restarting.
+
 
 ## UPDATE KEY SETTINGS
 

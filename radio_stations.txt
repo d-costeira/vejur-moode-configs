@@ -98,6 +98,18 @@ World
 AAC+ format
 
 
+Charlotte's Radio - WBKR GlobalCowPie
+https://radio.globalcowpie.com/stream.mp3
+Various
+? Broadcaster
+https://radio.globalcowpie.com
+English
+United States
+North America
+320
+MP3
+
+
 KCJV 97.9 FM San Antonio - No Hit Radio
 https://onlineradiobox.com/json/us/kcjvlp/play
 Oldies
